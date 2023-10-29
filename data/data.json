@@ -1,0 +1,107 @@
+{
+  "Experiences": [
+    {
+      "Poste": "Développeur logiciel",
+      "Entreprise": "Vertech'",
+      "Duree": "Depuis avril 2022",
+      "Lieu": "Chalon-sur-Saône, France",
+      "Description": "Rattaché au pôle R&D mes missions sont les suivantes :\n- Concevoir des applications complexes et ergonomiques pour l’industrie de la verrerie\n- Tester et/ou déployer nos solutions de supervision et de contrôle qualité chez nos clients en France et à l’international\n- Proposer des évolutions technologiques ou fonctionnelles\n\nPlus spécifiquement, je fais partie de l'équipe en charge de la BDD et des outils de reporting.",
+      "Competences": {
+        "Technologies": [
+          "Javascript",
+          "C# (.NET framework)",
+          "SQL (Oracle et MySQL)",
+          "Git",
+          "Windows PowerShell",
+          "MongoDB",
+          "Node.js",
+          "Docker"
+        ],
+        "Librairies": [
+          "Kendo UI",
+          "Bootsrap",
+          "NHibernate",
+          "OpenXML",
+          "Selenium"
+        ],
+        "Organisation": [
+          "Méthode agile",
+          "JIRA",
+          "Documentation WikiJS",
+          "Intégration continue via Jenkins"
+        ]
+      }
+    },
+    {
+      "Poste": "Représentant service client",
+      "Entreprise": "Uber",
+      "Duree": "octobre 2019 - août 2020",
+      "Lieu": "Lisbonne, Portugal",
+      "Description": "COE Specialist II - Point de contact de l'équipe en charge des coursiers partenaires Uber Eats",
+      "Competences": [
+        "Appels inbound et outbound",
+        "Traitement de tickets",
+        "Mentoring",
+        "Communication interne",
+        "Conception et rédaction de process"
+      ]
+    },
+    {
+      "Poste": "Représentant service client",
+      "Entreprise": "Teleperformance",
+      "Duree": "mars 2018 - octobre 2019",
+      "Lieu": "Lisbonne, Portugal",
+      "Description": "Je ne peux pas citer les clients de cette entreprise mais j'ai travaillé pour:\n- Une très grande enseigne de voyages en ligne\n- Une entreprise de vente de fournitures de bureau destinée aux professionnels",
+      "Competences": [
+        "Résolution de problèmes",
+        "Contact client",
+        "Relation B2B",
+        "Suivi affaires",
+        "Prise de commande"
+      ]
+    },
+    {
+      "Poste": "Divers emplois",
+      "Entreprise": "Principalement en intérim",
+      "Duree": "2012 - 2018",
+      "Lieu": "Lyon, France",
+      "Description": "J'ai fait beaucoup de petits jobs pendant que je m'essayais parallèlement à des études supérieures. Ca ne m'a pas aidé pour la fac mais ça m'a beaucoup endurcit.",
+      "Competences": [
+        "Manutention",
+        "Restauration",
+        "Accueil",
+        "Livraison",
+        "Nettoyage",
+        "Et j'en passe !"
+      ]
+    }
+  ],
+
+  "Education": [
+    {
+      "Date": "Décembre 2021 - avril 2022",
+      "Title": "Développeur web et web mobile",
+      "Institution": "OpenClassrooms"
+    },
+    {
+      "Date": "2017 - 2015",
+      "Title": "BTS Communication",
+      "Institution": "ICOGES Lyon, puis Lycée la Martinière Duchère"
+    },
+    {
+      "Date": "2013 - 2014",
+      "Title": "L1 Lettres Modernes",
+      "Institution": "Université Lyon 3"
+    },
+    {
+      "Date": "2013 - 2012",
+      "Title": "L1 Anthropologie",
+      "Institution": "Université Lyon 2"
+    },
+    {
+      "Date": "2012",
+      "Title": "Bac Littéraire",
+      "Institution": "Lycée de la Plaine de l'Ain"
+    }
+  ]
+}

@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- primary meta tags -->
+    <title>Andy Malonda</title>
+    <meta name="title" content="Andy Malonda" />
+    <meta
+      name="description"
+      content="This is a developper portfolio website for Andy Malonda"
+    />
+
+    <!-- favicon -->
+    <link rel="icon" href="./favicon/favicon.ico" type="image/x-icon" />
+
+    <!-- Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- custom css link -->
+    <link rel="stylesheet" href="styles/main.css" />
+    <link rel="stylesheet" href="styles/bootstrap/bootstrap.min.css" />
+    <script
+      src="https://kit.fontawesome.com/3bf1ef6297.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <!-- Go to top button -->
+    <button type="button" class="btn btn-floating btn-lg" id="btn-back-to-top">
+      <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <div class="lateral-menu">
+      <ul>
+        <li>
+          <a id="experiencesLink" href="#" data-target="#experiences"
+            >Expériences</a
+          >
+        </li>
+        <li>
+          <a id="educationLink" href="#" data-target="#education">Formations</a>
+        </li>
+        <li><a id="contactLink" href="#" data-target="#contact">Contact</a></li>
+      </ul>
+    </div>
+
+    <div class="container" id="content">
+      <div class="header">
+        <h1>Andy Malonda</h1>
+      </div>
+
+      <div class="container mt-5">
+        <section id="experiences">
+          <h2 class="mb-4 subtitle">Expériences</h2>
+          <div class="row"></div>
+        </section>
+
+        <section id="education">
+          <h2 class="mt-5 mb-4 subtitle">Education</h2>
+          <div class="row"></div>
+        </section>
+
+        <section id="contact">
+          <div class="row">Email</div>
+          <div class="row">LinkedIn</div>
+          <div class="row">GitHub</div>
+        </section>
+      </div>
+
+      <div class="footer">
+        <p>© 2023 Andy Malonda</p>
+      </div>
+    </div>
+  </body>
+
+  <script type="module" src="scripts/main.js"></script>
+  <script type="module" src="scripts/ui.js"></script>
+  <script type="module" src="scripts/scroll.js"></script>
+  <script type="module" src="scripts/utils.js"></script>
+  <script type="module" src="scripts/data.js"></script>
+  <script type="module" src="scripts/render.js"></script>
+  <script type="module" src="scripts/lateralNav.js"></script>
+</html>

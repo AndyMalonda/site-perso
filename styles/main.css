@@ -1,0 +1,87 @@
+/* BODY */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Roboto", Arial, sans-serif !important;
+  overflow-x: hidden; }
+
+/* HEADER */
+.header {
+  background-color: #a23c26;
+  color: white;
+  padding: 20px;
+  text-align: center;
+  width: 100%; }
+
+.subtitle {
+  color: #e9e3e3;
+  text-align: center; }
+
+.card {
+  background-color: #e9e3e3;
+  border-radius: 5px;
+  padding: 20px;
+  margin: 20px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2); }
+
+/* BACK TO TOP BUTTON */
+#btn-back-to-top {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  display: none; }
+
+/* LATERAL MENU */
+.lateral-menu {
+  width: 5%;
+  /* Collapsed width as a percentage of the page width */
+  height: 100vh;
+  /* Full page height */
+  background-color: #a23c26;
+  position: fixed;
+  top: 0;
+  left: 0;
+  transition: width 0.3s;
+  /* Add smooth transition */ }
+  .lateral-menu ul {
+    list-style: none;
+    padding: 0;
+    margin: 0; }
+    .lateral-menu ul li {
+      text-align: center;
+      padding: 10px 0; }
+      .lateral-menu ul li a {
+        text-decoration: none;
+        color: white;
+        display: none;
+        /* Hide links by default */ }
+  .lateral-menu:hover {
+    width: 15%;
+    /* Expanded width as a percentage of the page width on hover */ }
+    .lateral-menu:hover + #content {
+      margin-left: 15%;
+      /* Adjust the margin for the content */ }
+    .lateral-menu:hover li {
+      border-bottom: 1px solid white; }
+    .lateral-menu:hover ul li a {
+      display: inline;
+      /* Show links when menu is expanded */ }
+  .lateral-menu.expanded-content {
+    width: 15%;
+    transition: width 0.3s; }
+    .lateral-menu.expanded-content + #content {
+      margin-left: 15%; }
+    .lateral-menu.expanded-content li {
+      border-bottom: 1px solid white; }
+    .lateral-menu.expanded-content ul li a {
+      display: inline;
+      /* Show links when menu is expanded */ }
+
+/* CONTENT */
+#content {
+  margin-left: 5%;
+  /* Adjust the margin for the content */
+  max-width: 100%;
+  transition: margin-left 0.3s;
+  background-color: #e2552d;
+  padding: 20px; }
