@@ -38,19 +38,19 @@
       <i class="fas fa-arrow-up"></i>
     </button>
 
-    <div class="lateral-menu">
+    <div class="lateral-menu d-flex align-items-center">
       <ul>
-        <li>
-          <a id="experiencesLink" href="#" data-target="#experiences"
-            >Expériences</a
-          >
+        <li class="mb-4">
+          <a id="experiencesLink" href="#" data-target="#experiences" class="text-light">Expériences</a>
         </li>
-        <li>
-          <a id="educationLink" href="#" data-target="#education">Formations</a>
+        <li class="mb-4">
+          <a id="educationLink" href="#" data-target="#education" class="text-light">Formations</a>
         </li>
-        <li><a id="contactLink" href="#" data-target="#contact">Contact</a></li>
+        <li class="mb-4">
+          <a id="contactLink" href="#" data-target="#contact" class="text-light">Contact</a>
+        </li>
       </ul>
-    </div>
+    </div>   
 
     <div class="container" id="content">
       <div class="header">
@@ -68,11 +68,36 @@
           <div class="row"></div>
         </section>
 
+
         <section id="contact">
-          <div class="row">Email</div>
-          <div class="row">LinkedIn</div>
-          <div class="row">GitHub</div>
+          <div class="row">
+            <div class="col-md-4">
+              <div class="card">
+                <div class="card-body">
+                  <h5 class="card-title">Email</h5>
+                  <p class="card-text">your@email.com</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="card">
+                <div class="card-body">
+                  <h5 class="card-title">LinkedIn</h5>
+                  <p class="card-text">linkedin.com/in/yourprofile</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="card">
+                <div class="card-body">
+                  <h5 class="card-title">GitHub</h5>
+                  <p class="card-text">github.com/yourusername</p>
+                </div>
+              </div>
+            </div>
+          </div>
         </section>
+      </div>
       </div>
 
       <div class="footer">

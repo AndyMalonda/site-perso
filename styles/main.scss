@@ -1,59 +1,62 @@
-$primary-color: #a23c26;
-$secondary-color: #e2552d;
+$primary-color: #a50000; // Dark Red
+$secondary-color: #d62828; // Marsala
+$text-color: #333; // Dark Gray
+$background-color: #f9ebe1; // Pale Rose
+$button-color: #b21f35; // Red Ochre
 
-$RooibosTea: #a23c26;
-$Orangeade: #e2552d;
-$Watercress: #748c69;
-$DesertFlower: #ff9687;
-$ChambrayBlue: #9eb4d3;
-$PastelLilac: #bcafcf;
-$TCXMarlin: #515b87;
-$Lemondrop: #fdd878;
-$TCXMint: #00a170;
-$TCXCapri: #44bbca;
+// Base transition time
+$baseTransitionTime: 0.5s;
 
-$light-grey: #e9e3e3;
-$dark-grey: #b3a2a2;
-
-/* BODY */
+/* Body Styles */
 body {
-  margin: 0;
-  padding: 0;
+  background-color: $background-color;
+  color: $text-color;
   font-family: "Roboto", Arial, sans-serif !important;
   overflow-x: hidden;
 }
 
-/* HEADER */
+/* Header Styles */
 .header {
   background-color: $primary-color;
   color: white;
   padding: 20px;
   text-align: center;
-  width: 100%;
 }
 
+/* Subtitle Styles */
 .subtitle {
-  color: $light-grey;
+  color: $secondary-color;
   text-align: center;
 }
 
+/* Card Styles */
 .card {
-  background-color: $light-grey;
+  background-color: white;
   border-radius: 5px;
   padding: 20px;
   margin: 20px;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
 }
 
-/* BACK TO TOP BUTTON */
+/* Back to Top Button Styles */
 #btn-back-to-top {
   position: fixed;
   bottom: 20px;
   right: 20px;
   display: none;
+  background-color: $primary-color;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  z-index: 2;
+
+  &:hover {
+    background-color: $secondary-color;
+  }
 }
 
-/* LATERAL MENU */
+/* Lateral Menu Styles */
 .lateral-menu {
   width: 5%; /* Collapsed width as a percentage of the page width */
   height: 100vh; /* Full page height */
@@ -61,7 +64,8 @@ body {
   position: fixed;
   top: 0;
   left: 0;
-  transition: width 0.3s; /* Add smooth transition */
+  transition: width $baseTransitionTime;
+  z-index: 1; /* Ensure the menu is above other content */
 
   ul {
     list-style: none;
@@ -69,59 +73,58 @@ body {
     margin: 0;
 
     li {
-      text-align: center;
       padding: 10px 0;
 
       a {
         text-decoration: none;
         color: white;
         display: none; /* Hide links by default */
+        margin-left: 15%;
       }
     }
   }
 
   &:hover {
     width: 15%; /* Expanded width as a percentage of the page width on hover */
-
     + #content {
       margin-left: 15%; /* Adjust the margin for the content */
-    }
-
-    li {
-      border-bottom: 1px solid white;
-    }
-
-    ul li a {
-      display: inline; /* Show links when menu is expanded */
+      max-width: 85%; /* Adjust the max-width for the content */
     }
   }
 
-  // Adjust the rest of the page content when expanded
-  &.expanded-content {
-    width: 15%;
-
-    + #content {
-      margin-left: 15%;
-    }
-
-    li {
-      border-bottom: 1px solid white;
-    }
-
-    ul li a {
-      display: inline; /* Show links when menu is expanded */
-    }
-
-    transition: width 0.3s;
+  // Show links when menu is expanded
+  ul li a {
+    display: inline;
+    transition: opacity $baseTransitionTime;
   }
 }
 
-/* CONTENT */
-
+/* Content Styles */
 #content {
   margin-left: 5%; /* Adjust the margin for the content */
-  max-width: 100%;
-  transition: margin-left 0.3s;
+  max-width: 95%; /* Adjusted for the expanded menu */
+  transition: margin-left $baseTransitionTime, max-width $baseTransitionTime; /* Synchronize transitions */
   background-color: $secondary-color;
-  padding: 20px;
+}
+
+/* Ensure smooth transition for links when the menu is collapsed */
+.lateral-menu:not(:hover) ul li a {
+  opacity: 0;
+  transition: opacity $baseTransitionTime;
+}
+
+/* Button Styles */
+.button {
+  background-color: $button-color;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+
+  &:hover {
+    background-color: darken(
+      $button-color,
+      10%
+    ); // Darken the button color on hover
+  }
 }
