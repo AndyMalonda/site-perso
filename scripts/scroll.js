@@ -11,7 +11,8 @@ import { showElement, hideElement } from "./ui.js";
  *
  * @param {HTMLElement} goToTopBtn - The "back to top" button element.
  */
-export function handleScroll(goToTopBtn) {
+export function handleScroll() {
+  const goToTopBtn = document.getElementById("btn-back-to-top");
   window.addEventListener("scroll", () => {
     if (document.documentElement.scrollTop > 20) {
       showElement(goToTopBtn);
@@ -19,6 +20,7 @@ export function handleScroll(goToTopBtn) {
       hideElement(goToTopBtn);
     }
   });
+  goToTopBtn.addEventListener("click", scrollToTop);
 }
 
 /**

@@ -7,6 +7,12 @@ $button-color: #b21f35; // Red Ochre
 // Base transition time
 $baseTransitionTime: 0.5s;
 
+// Lateral menu styles
+$expandedMenuWidth: 15%; // Expanded width as a percentage of the page width on hover
+$collapsedContentWidth: calc(
+  100% - #{$expandedMenuWidth}
+); // Adjusted for the expanded menu
+
 /* Body Styles */
 body {
   background-color: $background-color;
@@ -67,6 +73,18 @@ body {
   transition: width $baseTransitionTime;
   z-index: 1; /* Ensure the menu is above other content */
 
+  #profile-picture-container {
+    width: 50px;
+    height: 50px;
+    margin-left: 10%;
+  }
+
+  #profile-picture {
+    width: inherit;
+    height: inherit;
+    border-radius: 50%;
+  }
+
   ul {
     list-style: none;
     padding: 0;
@@ -85,10 +103,10 @@ body {
   }
 
   &:hover {
-    width: 15%; /* Expanded width as a percentage of the page width on hover */
+    width: $expandedMenuWidth; /* Adjust the width for the expanded menu */
     + #content {
-      margin-left: 15%; /* Adjust the margin for the content */
-      max-width: 85%; /* Adjust the max-width for the content */
+      margin-left: $expandedMenuWidth; /* Adjust the margin for the content */
+      max-width: $collapsedContentWidth; /* Adjusted for the expanded menu */
     }
   }
 
@@ -105,6 +123,18 @@ body {
   max-width: 95%; /* Adjusted for the expanded menu */
   transition: margin-left $baseTransitionTime, max-width $baseTransitionTime; /* Synchronize transitions */
   background-color: $secondary-color;
+}
+
+/* Contact section */
+.contact-header {
+  display: flex;
+}
+
+.contact-icon {
+  height: 20px;
+  width: 20px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 /* Ensure smooth transition for links when the menu is collapsed */

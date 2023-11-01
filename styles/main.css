@@ -53,6 +53,14 @@ body {
   transition: width 0.5s;
   z-index: 1;
   /* Ensure the menu is above other content */ }
+  .lateral-menu #profile-picture-container {
+    width: 50px;
+    height: 50px;
+    margin-left: 10%; }
+  .lateral-menu #profile-picture {
+    width: inherit;
+    height: inherit;
+    border-radius: 50%; }
   .lateral-menu ul {
     list-style: none;
     padding: 0;
@@ -67,12 +75,12 @@ body {
         margin-left: 15%; }
   .lateral-menu:hover {
     width: 15%;
-    /* Expanded width as a percentage of the page width on hover */ }
+    /* Adjust the width for the expanded menu */ }
     .lateral-menu:hover + #content {
       margin-left: 15%;
       /* Adjust the margin for the content */
-      max-width: 85%;
-      /* Adjust the max-width for the content */ }
+      max-width: calc( 100% - 15%);
+      /* Adjusted for the expanded menu */ }
   .lateral-menu ul li a {
     display: inline;
     transition: opacity 0.5s; }
@@ -86,6 +94,16 @@ body {
   transition: margin-left 0.5s, max-width 0.5s;
   /* Synchronize transitions */
   background-color: #d62828; }
+
+/* Contact section */
+.contact-header {
+  display: flex; }
+
+.contact-icon {
+  height: 20px;
+  width: 20px;
+  margin-left: auto;
+  margin-right: auto; }
 
 /* Ensure smooth transition for links when the menu is collapsed */
 .lateral-menu:not(:hover) ul li a {

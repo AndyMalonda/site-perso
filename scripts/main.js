@@ -1,11 +1,7 @@
 import { handleScroll, scrollToTop } from "./scroll.js";
 import { fetchData } from "./data.js";
 import { renderExperiences, renderEducation } from "./render.js";
-
-const goToTopBtn = document.getElementById("btn-back-to-top");
-
-handleScroll(goToTopBtn);
-goToTopBtn.addEventListener("click", scrollToTop);
+import { handleNavigation } from "./lateralNav.js";
 
 (async () => {
   try {
@@ -17,30 +13,5 @@ goToTopBtn.addEventListener("click", scrollToTop);
   }
 })();
 
-const menuItems = document.querySelectorAll(".lateral-menu ul li");
-
-menuItems.forEach((item) => {
-  item.addEventListener("click", () => {
-    // Remove active class from all items
-    menuItems.forEach((menuItem) => {
-      menuItem.classList.remove("active");
-    });
-
-    // Add active class to the clicked item
-    item.classList.add("active");
-  });
-});
-
-// JavaScript code
-document.querySelectorAll(".lateral-menu a").forEach((link) => {
-  link.addEventListener("click", (event) => {
-    event.preventDefault();
-    const targetId = link.getAttribute("data-target");
-    const targetSection = document.querySelector(targetId);
-
-    if (targetSection) {
-      // Scroll to the target section smoothly
-      targetSection.scrollIntoView({ behavior: "smooth" });
-    }
-  });
-});
+handleScroll();
+handleNavigation();

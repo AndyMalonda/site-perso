@@ -20,6 +20,7 @@ const handleNavigation = () => {
       menuItems.forEach((menuItem) => {
         menuItem.classList.remove("active");
       });
+
       // Add active class to the clicked item
       item.classList.add("active");
     });
@@ -30,6 +31,7 @@ const handleNavigation = () => {
       event.preventDefault();
       const targetId = link.getAttribute("data-target");
       const targetSection = document.querySelector(targetId);
+
       if (targetSection) {
         // Scroll to the target section smoothly
         targetSection.scrollIntoView({ behavior: "smooth" });
